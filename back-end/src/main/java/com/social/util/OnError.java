@@ -1,8 +1,5 @@
 package com.social.util;
-/** 
- * @author kamal berriga
- *
- */
+
 public class OnError {
 
     private String errorMessage;

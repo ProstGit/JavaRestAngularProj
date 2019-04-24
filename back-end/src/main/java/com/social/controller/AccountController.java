@@ -22,7 +22,7 @@ public class AccountController {
 	@Autowired
 	private UserService userService;
 
-	// request method to create a new account by a guest
+	// create a new account
 	@CrossOrigin
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public ResponseEntity<?> createUser(@RequestBody User newUser) {
@@ -37,7 +37,7 @@ public class AccountController {
 		return new ResponseEntity<User>(userService.save(newUser), HttpStatus.CREATED);
 	}
 
-	// this is the login api/service
+
 	@CrossOrigin
 	@RequestMapping("/login")
 	public Principal user(Principal principal) {
@@ -45,7 +45,12 @@ public class AccountController {
 		return principal;
 	}
 
-
+	@CrossOrigin
+	@RequestMapping(value = "/changePas", method = RequestMethod.POST)
+	public ResponseEntity<?> editUserPas(@RequestBody User udatedUser) {
+		System.out.println(udatedUser.getPassword()+" "+udatedUser.getPassword());
+		return new ResponseEntity<User>(userService.updatePas(udatedUser), HttpStatus.CREATED);
+	}
 
 	@CrossOrigin
 	@RequestMapping(value = "/edit", method = RequestMethod.POST)
@@ -54,18 +59,6 @@ public class AccountController {
 		return new ResponseEntity<User>(userService.updateAll(udatedUser), HttpStatus.CREATED);
 	}
 
-	@CrossOrigin
-	@RequestMapping(value = "/changePas", method = RequestMethod.POST)
-	public ResponseEntity<?> editUserPas(@RequestBody User udatedUser) {
-		System.out.println(udatedUser.getPassword()+" "+udatedUser.getPassword());
 
-		return new ResponseEntity<User>(userService.updatePas(udatedUser), HttpStatus.CREATED);
-	}
-	@GetMapping("Test")
-   // public String GetSmth(@RequestParam String oldPas,@RequestParam String newPas,@RequestParam String retypePas){
-		public String GetSmt(){
-		System.out.println("AAAAAAAAAAAAAAAAAAA");
-		String str = "ASDASDASDASDKHA4RTGFOJL4TRGFVOJ;WMESDXCILKEFDX";
-		return 	str;
-	};
+
 }

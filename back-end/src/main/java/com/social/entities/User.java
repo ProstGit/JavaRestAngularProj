@@ -21,7 +21,6 @@ public  class User implements UserDetails{
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private Long id ;
 
-
 	@Column(unique = true)
 	private String email ;
 
@@ -45,31 +44,6 @@ public  class User implements UserDetails{
 		this.lastName = lastName;
 		this.phone = phone;
 	}
-
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-
-
-	public User(int age) {
-		this.age = age;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-
-
 	public void updateUser(User u){
 		this.age = u.age;
 		this.email = u.email;
@@ -143,7 +117,25 @@ public  class User implements UserDetails{
 	public String getUsername() {
 		return this.firstName+" "+this.lastName;
 	}
+	public String getPhone() {
+		return phone;
+	}
 
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public User(int age) {
+		this.age = age;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
 	public String getEmail() {
 		return email;
 	}
