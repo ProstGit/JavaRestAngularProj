@@ -13,6 +13,65 @@
 
 </head>
 <body >
+<div class="position-sticky sticky-top">
+  <nav class="navbar  navbar-expand-lg navbar-light bg-white "
+       style="
+     padding: 0px 170px 0px 170px ;
+     height: 65px ;
+     margin-bottom: 0px">
+    <div class="navbar-brand "
+         id="logotype1"
+         style="
+             font:25px sans-serif;
+             font-weight:bold;
+             margin-top: 20px;">
+      <div class="logo"
+           style="color: #2a2a2a;
+               display:inline-block;">Logo<div class="type" style="color: #4999f0;
+                    display:inline-block;">Type</div>
+      </div>
+    </div>
+
+    <div class="collapse navbar-collapse justify-content-end"
+         id="navbarNavDropdown">
+
+      <ul class="navbar-nav"
+          style="
+        font-size: 14px;
+        margin-top: 0px;
+        padding-top: 0px;">
+        <style>
+          @media only screen and (min-width: 768px) {
+            .dropdown:hover .dropdown-menu {
+              display: block;
+              margin-top: 0;
+            }
+          }
+          .nav-item{
+            margin-left: 30px;
+            color: #ababab;
+            font-weight:bold;
+          }
+          .nav-item a:hover{
+            color: #187dec;
+            transition: all 0.3s ease;
+          }
+          ul.navbar-nav a:hover{
+            color: #187dec !important;
+            transition: all 0.3s ease;
+          }
+        </style>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#"><span class="glyphicon glyphicon-log-in" (click)="logOut()"></span> LogOut</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
 <div class="card align-self-center justify-content-center  "
      style="
      background: #fafafa;
@@ -125,37 +184,11 @@
         </div>
       </div>
 
-
-
-      <!--<div class="form-group" [ngClass]="{ 'has-error': f.submitted && !passwordConfirm.valid }">-->
-        <!--<input type="password"-->
-               <!--placeholder="PasswordConfirm"-->
-               <!--class="form-control"-->
-               <!--name="passwordConfirm"-->
-               <!--id="passwordConfirm"-->
-               <!--[(ngModel)]="user.passwordConfirm" #passwordConfirm="ngModel" required minlength="4" />-->
-        <!--<div *ngIf="f.submitted && !passwordConfirm.valid" class="help-block">-->
-          <!--<div *ngIf="user.password.equals(user.passwordConfirm).errors.required">-->
-            <!--password don`t odinakovi.-->
-          <!--</div>-->
-          <!--<div *ngIf="passwordConfirm.errors.required">-->
-            <!--password is required.-->
-          <!--</div>-->
-          <!--<div *ngIf="passwordConfirm.errors.minlength">-->
-            <!--password must be at least 4 characters long.-->
-          <!--</div>-->
-
-        <!--</div>-->
-      <!--</div>-->
-
-
-
-
       <div id="remember" class="checkbox">
 
       </div>
       <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Create Account</button>
-      <button [routerLink]="['/login']" class="btn btn-lg btn-danger btn-block btn-cancel" type="button">Cancel</button>
+
 
     </form>
     </form>
