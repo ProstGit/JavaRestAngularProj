@@ -6,7 +6,6 @@ import {UrlPermission} from "./urlPermission/url.permission";
 import {EditProfileComponent} from "./components/edit-profile/edit-profile.component";
 import {ChangePasswordComponent} from "./components/change-password/change-password.component";
 
-// import {ChangePasswordComponent} from "./components/change-password/change-password.component";
 
 
 const appRoutes: Routes = [
@@ -16,7 +15,6 @@ const appRoutes: Routes = [
   { path: 'edit-profile', component: EditProfileComponent },
   { path: 'change-password', component: ChangePasswordComponent },
 
-  // otherwise redirect to profile
   { path: '**', redirectTo: '/login' }
 ];
 
