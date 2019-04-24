@@ -9,12 +9,12 @@ body{
   background: #ffffff;
   height: auto;
 }
-.welcome{
+.welcomeform{
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
   color: #665c76;
 }
-.welcome >p{
+.welcomeform >p{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,28 +25,25 @@ body{
 .welcometext{
   font-size: 80px ;
 }
-/*Меню*/
 
-/*Меню конец*/
-/*!*Вход регистрация начало*!*/
 .section{
 
-  /*border:1px solid #c7c8ca;*/
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .enter-form{
   background: #ffffff;
+  border:1px solid #c7c8ca;
+  margin: 20px 0px 50px 0px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  border:1px solid #c7c8ca;
-  margin: 20px 0px 50px 0px;
 }
 
 
