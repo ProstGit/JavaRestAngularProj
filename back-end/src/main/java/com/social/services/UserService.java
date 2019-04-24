@@ -3,7 +3,7 @@ package com.social.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.social.dao.UserRepository;
+import com.social.repository.UserRepository;
 import com.social.entities.User;
 
 @Service
